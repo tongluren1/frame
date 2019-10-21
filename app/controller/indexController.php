@@ -4,8 +4,10 @@ class indexController {
 
 	public function index()
 	{
-		$testService = new testService();
-		echo $testService->test();
+		$smarty = new Smarty();
+		$smarty->setTemplateDir(VIEW_PATH);
+		$smarty->assign('name', 'joe');
+	    $smarty->display("index.tpl");
 	}
 }
 

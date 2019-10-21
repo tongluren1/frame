@@ -1,7 +1,9 @@
 <?php
 
 $modelArr = array(
-	'Smarty' => ['./libs/smarty-3.1.33/libs/Autoloader.php', './libs/smarty-3.1.33/libs/Smarty.class.php']
+	'Smarty' => [
+		'.' . DIRECTORY_SEPARATOR . 'libs' . DIRECTORY_SEPARATOR . 'smarty-3.1.33' . DIRECTORY_SEPARATOR . 'libs' . DIRECTORY_SEPARATOR . 'Autoloader.php',
+		'.' . DIRECTORY_SEPARATOR . 'libs' . DIRECTORY_SEPARATOR . 'smarty-3.1.33' . DIRECTORY_SEPARATOR . 'libs' . DIRECTORY_SEPARATOR . 'bootstrap.php']
 );
 
 foreach ($modelArr as $modelName => $modelPaths) {

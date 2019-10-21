@@ -3,8 +3,12 @@
 require_once './config/const.php';
 require_once './app/provider/modelprovider.php';
 
-$s = new Smarty();
-var_dump($s);exit;
+define('BASE_PATH', __DIR__);
+define('CONTROLLER_PATH', BASE_PATH . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'controller');
+define('PROVIDER_PATH', BASE_PATH . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'provider');
+define('SERVICE_PATH', BASE_PATH . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'service');
+define('VIEW_PATH', BASE_PATH . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'view');
+define('LIBS_PATH', BASE_PATH . DIRECTORY_SEPARATOR . 'libs');
 
 if(!isset($_GET['c'])) {
 	$controller = 'index';
